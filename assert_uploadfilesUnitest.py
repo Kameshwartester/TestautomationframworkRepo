@@ -16,7 +16,5 @@ def testDepartmentforNull_value():
 def test_employeenoUniquevalue():
     target_df=pd.read_csv('target.csv')
     totalcount=target_df['eno'].count()
-    print(f"\n total count: {totalcount}")
     emplyoeeUniqecount=len(target_df['eno'].unique())
-    print(f"total emp unique : {emplyoeeUniqecount}")
     assert totalcount==emplyoeeUniqecount,"Employee's isnot unique"
